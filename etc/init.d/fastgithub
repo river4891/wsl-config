@@ -1,0 +1,17 @@
+#! /bin/sh
+
+path="/opt/fastgithub/fastgithub"
+
+case "$1" in
+	start)
+		$path &
+		;;
+	stop)
+		kill -9 $(ps -aux | awk -F '[ ]+' '/fastgithub/{print $2}')
+		;;
+
+	*)
+		echo "Usage: $N {start|stop|restart|force-reload|status}" >&2
+		exit 1
+		;;
+esac
