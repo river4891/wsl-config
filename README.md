@@ -110,7 +110,7 @@ lookup: https://docs.nvidia.com/cuda/wsl-user-guide/index.html
 
 Install NVIDIA GeForce Game Ready or NVIDIA RTX Quadro Windows 11 display driver on your system with a compatible GeForce or NVIDIA RTX/Quadro card from https://www.nvidia.com/Download/index.aspx. Refer to the system requirements in the Appendix.)
 
-==Note== : This is the only driver you need to install. Do not install any Linux display driver in WSL.
+**Note** : This is the only driver you need to install. Do not install any Linux display driver in WSL.
 
 
 ### CUDA Support for WSL 2
@@ -121,19 +121,19 @@ First, remove the old GPG key:
 sudo apt-key del 7fa2af80
 ```
 
-Option 1: Installation of Linux x86 CUDA Toolkit using WSL-Ubuntu Package - ==Recommended==
-
-download link: "https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=WSL-Ubuntu&target_version=2.0&target_type=deb_network"
-
-The CUDA WSL-Ubuntu local installer does not contain the NVIDIA Linux GPU driver, so by following the steps on the [CUDA download page](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=WSL-Ubuntu&target_version=2.0&target_type=deb_network) for WSL-Ubuntu, you will be able to get just the CUDA toolkit installed on WSL.
-
-Option 2: Installation of Linux x86 CUDA Toolkit using Meta Package
-
-If you installed the toolkit using the WSL-Ubuntu package, please skip this section. Meta packages do not contain the driver, so by following the steps on the download page for Ubuntu, you will be able to get just the CUDA toolkit installed on WSL.
-
-The installation instructions for the CUDA Toolkit can be found in the CUDA Toolkit download page for each installer. But DO NOT choose the “cuda”, “cuda-12-x”, or “cuda-drivers” meta-packages under WSL 2 as these packages will result in an attempt to install the Linux NVIDIA driver under WSL 2. Install the cuda-toolkit-12-x metapackage only.
-
-You can also install other components of the toolkit by choosing the right meta-package.
+> * Option 1: Installation of Linux x86 CUDA Toolkit using WSL-Ubuntu Package - **Recommended**
+> 
+> > download link: "https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=WSL-Ubuntu&target_version=2.0&target_type=deb_network"
+> >
+> > The CUDA WSL-Ubuntu local installer does not contain the NVIDIA Linux GPU driver, so by following the steps on the [CUDA download page](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=WSL-Ubuntu&target_version=2.0&target_type=deb_network) for WSL-Ubuntu, you will be able to get just the CUDA toolkit installed on WSL.
+> 
+> * Option 2: Installation of Linux x86 CUDA Toolkit using Meta Package
+> 
+> > If you installed the toolkit using the WSL-Ubuntu package, please skip this section. Meta packages do not contain the driver, so by following the steps on the download page for Ubuntu, you will be able to get just the CUDA toolkit installed on WSL.
+> >
+> > The installation instructions for the CUDA Toolkit can be found in the CUDA Toolkit download page for each installer. But DO NOT choose the “cuda”, “cuda-12-x”, or “cuda-drivers” meta-packages under WSL 2 as these packages will result in an attempt to install the Linux NVIDIA driver under WSL 2. Install the cuda-toolkit-12-x metapackage only.
+> >
+> > You can also install other components of the toolkit by choosing the right meta-package.
 
 ### set env for CUDA in WSL2
 
@@ -167,12 +167,12 @@ you should setup in NVIDIA when your download archive
 tar -xzf ./cudnn-linux-x86_64-8.9.3.28_cuda12-archive.tar.xz
 
 # option:
-mv ./cudnn-linux-x86_64-8.9.3.28_cuda12-archive /opt/cudnn
+# mv ./cudnn-linux-x86_64-8.9.3.28_cuda12-archive /opt/cudnn
 
 ```
 
-==notice `/usr/local/cuda-<version>` ==
-my driver and path is 12.2
+**notice** `/usr/local/cuda-<version>`
+* my driver and path is 12.2
 
 ```bash
 # reference: https://github.com/zihan987/wsl2-config
