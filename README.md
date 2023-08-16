@@ -196,6 +196,6 @@ bash Miniconda3-latest-Linux-x86_64.sh
 
 # reference
 
-https://learn.microsoft.com/en-us/windows/wsl
-https://developer.nvidia.com
-https://github.com/zihan987/wsl2-config
+* https://learn.microsoft.com/en-us/windows/wsl
+* https://developer.nvidia.com
+* https://github.com/zihan987/wsl2-config
